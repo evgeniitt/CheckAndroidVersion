@@ -3,9 +3,11 @@ package ru.appium;
 import io.qameta.allure.*;
 import listeners.AddScreenshotListener;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ru.appium.pages.*;
+import ru.appium.utils.DriverManager;
 
 
 @Listeners(AddScreenshotListener.class)
@@ -23,6 +25,10 @@ public class CheckAndroidVersionTest {
         new SettingsPage().openSystemMenu();
         new SystemMenuPage().openVersionMenu();
         new AndroidVersionPage().checkVersion("Android: 13");
+    }
+    @AfterTest
+    public void tearDown() {
+        DriverManager.getDriver().quit();
     }
 
 }

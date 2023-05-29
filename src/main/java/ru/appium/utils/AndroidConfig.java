@@ -13,6 +13,7 @@ public interface AndroidConfig extends Config {
     String deviceName();
 
     String automationName();
+
     Long time();
 
 }
