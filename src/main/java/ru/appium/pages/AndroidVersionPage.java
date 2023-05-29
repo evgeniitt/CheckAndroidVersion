@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 public class AndroidVersionPage extends AbstractBasePage{
 
-    @FindBy (xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView")
+    @FindBy (xpath = "//*[contains(@text, 'Версия Android')]")
     private WebElement androidVersionFrame;
 
     @Step("Сверяем текущую версию с актуальной")
