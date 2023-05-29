@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SettingsPage extends AbstractBasePage{
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[5]")
-    WebElement systemButton;
+
+    @FindBy(xpath = "//*[contains(@text, 'Система')]")
+    private WebElement systemButton;
+
     @Step("Открываем системное меню")
     public void openSystemMenu() {
         systemButton.click();

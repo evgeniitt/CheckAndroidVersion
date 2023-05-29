@@ -12,12 +12,10 @@ public class AddScreenshotListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         attachScreen();
     }
-
     @Override
     public void onTestFailure(ITestResult result) {
         attachScreen();
     }
-
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = ".png")
     private byte[] attachScreen() {
         return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);

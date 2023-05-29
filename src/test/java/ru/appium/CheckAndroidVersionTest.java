@@ -16,7 +16,6 @@ public class CheckAndroidVersionTest {
     @Description("Открываем меню с приложениями, переходим в настройки, переходим в раздел с версией системы, проверяем версию системы")
     @Feature(value = "Проверяем версию системы")
     @Story(value = "Переходим в раздел с настройками и проверяем версию системы")
-
     @Test(description = "Проверяем версию системы")
     public void checkAndroidVersionTest() {
         new MainPage().swipeUp();
